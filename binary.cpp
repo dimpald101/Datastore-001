@@ -187,7 +187,6 @@ int main() {
 
     std::vector<Row> filteredRows = csvFilter.filterRows(allRows);
 
-    // Display the filtered rows (in pages of size 50)
     const int pageSize = 50;
     for (size_t i = 0; i < filteredRows.size(); i += pageSize) {
         for (size_t j = i; j < i + pageSize && j < filteredRows.size(); ++j) {
@@ -198,7 +197,6 @@ int main() {
             std::cout << std::endl;
         }
 
-        // Prompt to continue to the next page
         std::cout << "Press Enter to continue...";
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     }
